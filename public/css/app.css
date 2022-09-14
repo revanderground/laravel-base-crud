@@ -10855,3 +10855,20 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.my-navbar-nav {
+  height: 50px;
+  padding-left: 30px;
+}
+
+.logo-comics {
+  height: 40px;
+}
+
+a.my-navlink {
+  color: white;
+  transition: 0.5s ease;
+}
+
+a.my-navlink:hover {
+  color: #00acc1;
+}
