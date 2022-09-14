@@ -5,10 +5,11 @@
 @section('main-content')
     <div class="container my-5">
         <div class="row">
-            <table class="table table-striped">
-                <thead>
+            <table class="table table-striped col-12">
+                <thead class="table-dark">
                     <th>ID</th>
-                    <th colspan="2">Title</th>
+                    <th colspan="3"  class="px-4">Title</th>
+                    <th>Price</th>
                     <th>Series</th>
                     <th>Sales Date</th>
                     <th>Type</th>
