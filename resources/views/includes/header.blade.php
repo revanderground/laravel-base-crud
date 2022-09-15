@@ -14,7 +14,7 @@
                     <a class="nav-link  my-navlink" href="{{ route('home.index') }}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link  my-navlink" href="{{ route('comics') }}">Comics</a>
+                    <a class="nav-link  my-navlink" href="{{ route('comics.index') }}">Comics</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link my-navlink" href="{{ route('contacts') }}">Contacts</a>

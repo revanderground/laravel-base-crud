@@ -10872,3 +10872,8 @@ a.my-navlink {
 a.my-navlink:hover {
   color: #00acc1;
 }
+
+.showCard {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgb(86, 34, 34) 0%, rgb(237, 39, 130) 35%, rgb(255, 148, 148) 100%);
+}

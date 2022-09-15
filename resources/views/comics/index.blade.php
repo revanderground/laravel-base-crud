@@ -25,7 +25,7 @@
                                 {{ $comic->title}}
                             </td>
                             <td>
-                                {{ $comic->price }}
+                                {{ $comic->price }} €
                             </td>
                             <td>
                                 {{ $comic->series }}
