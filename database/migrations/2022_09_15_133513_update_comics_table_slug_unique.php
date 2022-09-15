@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateComicsTableChangingColumn extends Migration
+class UpdateComicsTableSlugUnique extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,7 @@ class UpdateComicsTableChangingColumn extends Migration
     public function up()
     {
         Schema::table('comics', function (Blueprint $table) {
-
-            $table->longText('description')->change();
-
+            $table->string('slug')->unique()->change();
         });
     }
 
@@ -28,9 +26,7 @@ class UpdateComicsTableChangingColumn extends Migration
     public function down()
     {
         Schema::table('comics', function (Blueprint $table) {
-
-            $table->string('description')->change();
-
+            $table->string('slug')->change();
         });
     }
 }
