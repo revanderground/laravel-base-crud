@@ -22,7 +22,10 @@
                             </td>
                             <td colspan="2"></td>
                             <td>
-                                {{ $comic->title}}
+                                <a href="{{ route('comics.show', $comic->id) }}">
+                                    {{ $comic->title}}
+                                </a>
+
                             </td>
                             <td>
                                 {{ $comic->price }} €
