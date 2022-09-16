@@ -28,7 +28,7 @@
 
                             </td>
                             <td>
-                                {{ $comic->price }} €
+                                {{ round($comic->price, 2) }} €
                             </td>
                             <td>
                                 {{ $comic->series }}

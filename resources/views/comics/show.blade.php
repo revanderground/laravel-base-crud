@@ -21,7 +21,7 @@
           </p>
 
           <a href="#" class="btn btn-primary">
-             {{ $comic->price }}€
+            {{ round($comic->price, 2) }} €
           </a>
         </div>
         <div class="card-footer text-muted">
