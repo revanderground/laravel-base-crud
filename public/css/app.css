@@ -10877,3 +10877,8 @@ a.my-navlink:hover {
   background: rgb(2, 0, 36);
   background: linear-gradient(180deg, rgb(86, 34, 34) 0%, rgb(237, 39, 130) 35%, rgb(255, 148, 148) 100%);
 }
+
+.my-background {
+  background: rgb(208, 206, 255);
+  background: linear-gradient(180deg, rgb(198, 81, 81) 0%, rgb(237, 39, 130) 35%, rgb(255, 148, 148) 100%);
+}

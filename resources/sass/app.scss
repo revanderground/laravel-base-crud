@@ -5,3 +5,7 @@
 @import './partials/comics.scss';
 @import './partials/main.scss';
 
+.my-background{
+    background: rgb(208, 206, 255);
+    background: linear-gradient(180deg, rgb(198, 81, 81) 0%, rgba(237,39,130,1) 35%, rgba(255,148,148,1) 100%);
+}
