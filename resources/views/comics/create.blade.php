@@ -50,7 +50,7 @@
             </div>
 
             <div class="form-group py-3 text-center">
-                <button type="submit" class="btn btn-lg btn-secondary">Send your comic</button>
+                <button type="submit" class="btn btn-lg btn-secondary">Add your comic</button>
             </div>
 
         </form>

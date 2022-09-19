@@ -53,7 +53,7 @@ class ComicController extends Controller
 
         $comic->save();
 
-        return redirect()->route('comics.show', compact($comic));
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
@@ -62,9 +62,10 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $comic = Comic::where('slug', $slug)->first();
+        $comic = Comic::findOrFail($id);
+        // $comic = Comic::where('slug', $slug)->first();
         return view('comics.show', compact('comic'));
     }
 
@@ -74,9 +75,10 @@ class ComicController extends Controller
 
      * @return \Illuminate\Http\Response
      */
-    public function edit($slug)
+    public function edit($id)
     {
-        $comic = Comic::where('slug', $slug)->first();
+        $comic = Comic::findOrFail($id);
+        // $comic = Comic::where('slug', $slug)->first();
         return view('comics.edit', compact('comic'));
     }
 
@@ -84,12 +86,26 @@ class ComicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $sentData = $request->all();
+        $comic = Comic::findorFail($id);
+
+        $comic->title = $sentData['title'];
+        $comic->price = $sentData['price'];
+        $comic->series = $sentData['series'];
+        $comic->description = $sentData['description'];
+        $comic->sale_date = $sentData['sale_date'];
+        $comic->thumb = $sentData['thumb'];
+        $comic->type = $sentData['type'];
+
+        $comic->slug = Str::slug($comic->title);
+
+        $comic->save();
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

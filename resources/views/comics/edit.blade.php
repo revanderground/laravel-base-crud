@@ -9,9 +9,11 @@
     <div class="col-6 p-3 mx-auto">
 
         {{-- Specificazione ROTTAe METDO --}}
-        <form action="{{ route('comics.store') }}" method='POST'>
+        <form action="{{ route('comics.update', $comic->id) }}" method='POST'>
         {{-- INSERIMENTO del XSRF --}}
         @csrf
+        {{-- aggiungiamo il METODO --}}
+        @method('PUT')
 
 
             <div class="form-group py-3 py-3">
@@ -53,7 +55,7 @@
             </div>
 
             <div class="form-group py-3 text-center">
-                <button type="submit" class="btn btn-lg btn-secondary">Send your comic</button>
+                <button type="submit" class="btn btn-lg btn-secondary">Update your comic</button>
             </div>
 
         </form>

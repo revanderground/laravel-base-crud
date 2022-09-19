@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('name', 'Comic: ' . $comic->title)
+@section('title', 'Comic: ' . $comic->title)
 
 @section('main-content')
 
@@ -25,7 +25,7 @@
           </a>
         </div>
         <div class="card-footer text-muted">
-            {{ $comic->sale_date }}
+            {{ $comic->sale_date }} -  {{ $comic->slug }}
         </div>
       </div>
 </section>

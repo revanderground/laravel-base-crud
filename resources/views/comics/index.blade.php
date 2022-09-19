@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('name', 'Main comics')
+@section('title', 'Main comics')
 
 @section('main-content')
     <div class="container my-5">
@@ -23,7 +23,7 @@
                             </td>
                             <td colspan="2"></td>
                             <td>
-                                <a href="{{ route('comics.show', $comic->slug) }}">
+                                <a href="{{ route('comics.show', $comic->id) }}">
                                     {{ $comic->title}}
                                 </a>
 
@@ -42,7 +42,7 @@
                             </td>
                             <td>
 
-                                <a href="{{ route('comics.edit', $comic->slug) }}" class="btn btn-sm btn-success">
+                                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-sm btn-success">
                                     Edit
                                 </a>
 
