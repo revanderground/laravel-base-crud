@@ -13,6 +13,7 @@
                     <th>Series</th>
                     <th>Sales Date</th>
                     <th>Type</th>
+                    <th></th>
                 </thead>
                 <tbody>
                     @forelse ($comics as $comic)
@@ -39,9 +40,21 @@
                             <td>
                                 {{ $comic->type }}
                             </td>
+                            <td>
+
+                                <a href="{{ route('comics.edit', $comic->slug) }}" class="btn btn-sm btn-success">
+                                    Edit
+                                </a>
+
+                            </td>
 
                         </tr>
                     @empty
+                    <tr>
+                        <td colspan="6">
+                            Non sono disponibili comic da visualizzare
+                        </td>
+                    </tr>
 
                     @endforelse
                 </tbody>

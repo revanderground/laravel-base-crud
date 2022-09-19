@@ -53,7 +53,7 @@ class ComicController extends Controller
 
         $comic->save();
 
-        return redirect()->route('comics.show', $comic->slug);
+        return redirect()->route('comics.show', compact($comic));
     }
 
     /**
@@ -71,12 +71,13 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+        $comic = Comic::where('slug', $slug)->first();
+        return view('comics.edit', compact('comic'));
     }
 
     /**
